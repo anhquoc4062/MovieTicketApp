@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blackBackground"
+    tools:context=".activity.SuatChieuActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/txt_tenphim_chonghe"
+                            android:textSize="17dp"
+                            android:textColor="@color/whiteText"
+                            android:textStyle="bold"
+                            android:paddingTop="30dp"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:text="ĐANG TẢI..."
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:id="@+id/txt_ngaygiochieu_chonghe"
+                            android:layout_marginTop="-20dp"
+                            android:textColor="@color/grayText"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:text="Đang tải..."
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                    </LinearLayout>
+                    <android.support.v7.widget.Toolbar
+                        android:theme="@style/ToolbarColoredBackArrow"
+                        app:titleTextColor="@color/whiteText"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/tb_chonghe"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize">
+
+                    </android.support.v7.widget.Toolbar>
+                </RelativeLayout>
+                <!--Line-->
+                <LinearLayout
+                    android:layout_gravity="center"
+                    android:layout_width="320dp"
+                    android:layout_height="1dp"
+                    android:background="@color/blackLine"/>
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:background="@drawable/seat"
+                            android:layout_gravity="center"
+                            android:backgroundTint="@color/whiteText"
+                            android:layout_width="20dp"
+                            android:layout_height="15dp">
+
+                        </LinearLayout>
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/whiteText"
+                            android:textSize="15dp"
+                            android:text="Còn trống"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginRight="50dp"
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_gravity="center"
+                            android:backgroundTint="@color/darkGrayText"
+                            android:background="@drawable/seat"
+                            android:layout_width="20dp"
+                            android:layout_height="15dp">
+
+                        </LinearLayout>
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/whiteText"
+                            android:textSize="15dp"
+                            android:text="Có người"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_gravity="center"
+                            android:background="@drawable/seat"
+                            android:backgroundTint="@color/redText"
+                            android:layout_width="20dp"
+                            android:layout_height="15dp">
+
+                        </LinearLayout>
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/whiteText"
+                            android:textSize="15dp"
+                            android:text="Đã chọn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--Line-->
+                <LinearLayout
+                    android:layout_gravity="center"
+                    android:layout_width="320dp"
+                    android:layout_height="1dp"
+                    android:background="@color/blackLine"/>
+                <android.support.v7.widget.RecyclerView
+                    android:layout_marginTop="50dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/rv_ghengoi_chonghe"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+
+        </ScrollView>
+        <Button
+            android:textSize="17dp"
+            android:id="@+id/btn_chonghe_suatchieu"
+            android:textColor="@color/whiteText"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center_horizontal"
+            android:text="THANH TOÁN - $0"
+            android:textStyle="bold"
+            android:background="@drawable/button_gradient"
+            android:layout_width="match_parent"
+            android:layout_height="55dp" />
+
+    </RelativeLayout>
+</LinearLayout>

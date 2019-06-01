@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blackBackground"
+    tools:context=".activity.SuatChieuActivity">
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="230dp">
+
+                    <ImageView
+                        android:id="@+id/img_banner_suatchieu"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/loading_banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <LinearLayout
+                        android:layout_alignParentBottom="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_marginBottom="-5dp"
+                            android:background="@drawable/background_gradient"
+                            android:id="@+id/txt_tenphim_suatchieu"
+                            android:layout_marginTop="10dp"
+                            android:textStyle="bold"
+                            android:padding="20dp"
+                            android:textSize="18dp"
+                            android:textColor="@color/whiteText"
+                            android:text="ALITA: NỮ THẦN CHIẾN BINH"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <android.support.v7.widget.Toolbar
+                        android:theme="@style/ToolbarColoredBackArrow"
+                        app:title="Phim"
+                        app:titleTextColor="@color/whiteText"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/tb_suatchieu"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize">
+
+                    </android.support.v7.widget.Toolbar>
+                </RelativeLayout>
+                <!--Line-->
+                <LinearLayout
+                    android:layout_gravity="center"
+                    android:layout_width="320dp"
+                    android:layout_height="1dp"
+                    android:background="@color/blackLine"/>
+
+
+                <LinearLayout
+                    android:background="@color/blackBackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/vp_ngaychieu_suatchieu"
+                        android:clipToPadding="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+
+
+                    </android.support.v4.view.ViewPager>
+                </LinearLayout>
+                <!--Line-->
+                <LinearLayout
+                    android:layout_gravity="center"
+                    android:layout_width="320dp"
+                    android:layout_height="1dp"
+                    android:background="@color/blackLine"/>
+                <android.support.v7.widget.RecyclerView
+                    android:paddingBottom="55dp"
+                    android:layout_margin="20dp"
+                    android:id="@+id/rv_giochieu_suatchieu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </android.support.v7.widget.RecyclerView>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+        <Button
+            android:textSize="17dp"
+            android:id="@+id/btn_chonghe_suatchieu"
+            android:textColor="@color/whiteText"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center_horizontal"
+            android:text="CHỌN GHẾ"
+            android:textStyle="bold"
+            android:background="@drawable/button_gradient"
+            android:layout_width="match_parent"
+            android:layout_height="55dp" />
+
+    </RelativeLayout>
+</LinearLayout>

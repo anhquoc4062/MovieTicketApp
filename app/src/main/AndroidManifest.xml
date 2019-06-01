@@ -12,7 +12,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.ChiTietPhimActivity"></activity>
+        <activity android:name=".activity.ComboActivity"></activity>
+        <activity android:name=".activity.ChonGheActivity" />
+
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@drawable/background_gradient" />
+
+        <activity android:name=".activity.SuatChieuActivity" />
+        <activity android:name=".activity.ChiTietPhimActivity" />
         <activity android:name=".activity.ThongTinActivity" />
         <activity android:name=".activity.LienHeActivity" />
         <activity android:name=".activity.PhimTheoTheLoaiActivity" />

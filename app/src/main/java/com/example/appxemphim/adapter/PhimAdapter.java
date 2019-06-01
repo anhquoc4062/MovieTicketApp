@@ -70,7 +70,6 @@ public class PhimAdapter extends RecyclerView.Adapter<PhimAdapter.ItemHolder> {
                 @Override
                 public void onClick(View view) {
                     Intent intent = new Intent(context, ChiTietPhimActivity.class);
-                    Log.d("kiểm tra id phim", arrayphim.get(getPosition()).getId_phim() + "");
                     intent.putExtra("id_phim", arrayphim.get(getPosition()).getId_phim());
                     context.startActivity(intent);
                 }

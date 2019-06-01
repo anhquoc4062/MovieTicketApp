@@ -4,119 +4,237 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/blackBackground"
     android:orientation="vertical"
     tools:context=".activity.ChiTietPhimActivity">
 
-    <android.support.v7.widget.Toolbar
-
-        android:id="@+id/toolbarchitiet"
-        android:background="#e74c3c"
-        app:title="Thông tin chi tiết"
-        app:titleTextColor="#ecf0f1"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize">
+        android:layout_height="match_parent">
 
-    </android.support.v7.widget.Toolbar>
-
-    <FrameLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:id="@+id/imageviewbanner"
-            android:src="@drawable/banner"
-            android:scaleType="fitXY"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="220dp" />
-        <ImageView
-            android:layout_gravity="bottom"
-            android:id="@+id/imageviewchitiet"
-            android:src="@drawable/alita"
-            android:scaleType="fitXY"
-            android:layout_margin="10px"
-            android:layout_width="140dp"
-            android:layout_height="200dp" />
+            android:layout_height="match_parent">
 
-        <LinearLayout
-            android:layout_marginLeft="150dp"
-            android:layout_marginTop="220dp"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
             <LinearLayout
-                android:layout_margin="20px"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:id="@+id/textphimtenphimchitiet"
-                    android:text="ALITA: NỮ THẦN CHIẾN BINH"
-                    android:textSize="20dp"
-                    android:textColor="#2c3e50"
-                    android:textStyle="bold"
+                android:layout_height="match_parent">
+
+
+                <FrameLayout
+
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <WebView
+                            android:background="@color/blackBackground"
+                            android:id="@+id/wv_trailer_phim"
+                            android:layout_width="match_parent"
+                            android:layout_height="220dp">
+
+                        </WebView>
+
+                    </LinearLayout>
+                    <android.support.v7.widget.Toolbar
+                        android:theme="@style/ToolbarColoredBackArrow"
+                        app:title="Phim"
+                        app:titleTextColor="@color/whiteText"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/toolbarchitiet"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize">
+
+                    </android.support.v7.widget.Toolbar>
+                    <LinearLayout
+                        android:layout_gravity="bottom"
+                        android:paddingLeft="30dp"
+                        android:paddingTop="20dp"
+                        android:paddingBottom="20dp"
+                        android:background="@drawable/background_chitiet_gradient"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/txt_tenphim_chitiet"
+                            android:text="ALITA: NỮ THẦN CHIẾN BINH"
+                            android:textSize="15dp"
+                            android:textColor="@color/whiteText"
+                            android:textStyle="bold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <!--Line-->
                 <LinearLayout
-                    android:layout_marginTop="30px"
-                    android:layout_marginBottom="30px"
+                    android:layout_gravity="center"
+                    android:layout_width="300dp"
+                    android:layout_height="1dp"
+                    android:background="@color/blackLine"/>
+
+                <LinearLayout
+                    android:paddingLeft="10dp"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:background="@color/blackBackground"
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_marginLeft="20dp"
+                        android:id="@+id/img_hinhphim_chitiet"
+                        android:src="@drawable/alita"
+                        android:layout_width="100dp"
+                        android:layout_height="150dp" />
+                    <LinearLayout
+
+                        android:layout_marginLeft="20dp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <LinearLayout
+                            android:layout_marginBottom="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textStyle="bold"
+                                android:text="Thời lượng: "
+                                android:textColor="@color/redText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:id="@+id/txt_thoiluong_chitiet"
+                                android:textStyle="bold"
+                                android:text="128 phút"
+                                android:textColor="@color/whiteText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                        <LinearLayout
+
+                            android:layout_marginBottom="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textStyle="bold"
+                                android:text="Đạo diễn: "
+                                android:textColor="@color/redText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:id="@+id/txt_daodien_chitiet"
+                                android:textStyle="bold"
+                                android:text="James Wang"
+                                android:textColor="@color/whiteText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                        <LinearLayout
+
+                            android:layout_marginBottom="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textStyle="bold"
+                                android:text="Ngôn ngữ: "
+                                android:textColor="@color/redText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:id="@+id/txt_ngonngu_chitiet"
+                                android:textStyle="bold"
+                                android:text="Tiếng Anh"
+                                android:textColor="@color/whiteText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textStyle="bold"
+                                android:text="Khởi chiếu: "
+                                android:textColor="@color/redText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:id="@+id/txt_khoichieu_chitiet"
+                                android:textStyle="bold"
+                                android:text="28/2/2019"
+                                android:textColor="@color/whiteText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <!--Line-->
+                <LinearLayout
+                    android:layout_gravity="center"
+                    android:layout_width="300dp"
+                    android:layout_height="1dp"
+                    android:background="@color/blackLine"/>
+
+                <!--Mô tả-->
+                <LinearLayout
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:paddingLeft="30dp"
+                    android:layout_marginTop="10px"
+                    android:background="@color/blackBackground"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
                     <TextView
-                        android:textSize="16dp"
-                        android:textColor="#2d3436"
+                        android:textColor="@color/redText"
                         android:textStyle="bold"
-                        android:text="Thời lượng phim: "
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                    <TextView
-                        android:textSize="16dp"
-                        android:textColor="#2d3436"
-                        android:id="@+id/textviewthoiluongchitiet"
-                        android:text="130 phút"
-                        android:layout_width="wrap_content"
+                        android:layout_margin="10px"
+                        android:textSize="15dp"
+                        android:text="MÔ TẢ PHIM"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
                 </LinearLayout>
-                <ImageButton
-                    android:id="@+id/buttondatve"
-                    android:src="@drawable/buyticket"
-                    android:scaleType="fitXY"
-                    android:background="#fff"
-                    android:layout_width="100dp"
-                    android:layout_height="70dp" />
+                <TextView
+                    android:paddingBottom="55dp"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:id="@+id/txt_mota_chitiet"
+                    android:layout_margin="20px"
+                    android:textColor="@color/whiteText"
+                    android:text="Tác phẩm live-action chuyển thể: Bác phẩm hành động viễn tưởng đỉnh cao qua bàn tay nhào nặn của những tên tuổi huyền thoại - James Cameron, Jon Landau và đạo diễn Robert Rodriguez. Phim lấy bối cảnh ở thế kỷ 26, xoay quanh nữ cyborg Alita do nữ diễn viên Rosa Salazar thủ vai. Cô bị bỏ rơi ở một bãi rác thải của Iron City và được cứu chữa bởi tiến sĩ Dyson Ido (Christoph Waltz thủ vai). Sau khi tỉnh dậy, cô không còn nhớ mình là ai và thế giới của cô đang sống như thế nào. Trong khi bác sĩ Ido ra sức che giấu quá khứ phức tạp của Alita thì người bạn mới là Hugo tìm cách giúp cô lấy lại ký ức. Alita dần phát hiện ra người cha nuôi của mình là một thợ săn tiền thưởng và sau đó, cô tham gia cùng với ông để tìm hiểu về quá khứ của mình. Cô dần phát hiện khả năng chiến đấu siêu phàm cũng như vai trò của cô giữa thế giới bị bao phủ bởi nhiều thế lực bóng tối."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
             </LinearLayout>
+        </ScrollView>
 
-        </LinearLayout>
 
-
-    </FrameLayout>
-    <LinearLayout
-        android:layout_marginTop="10px"
-        android:background="#e74c3c"
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:textColor="#ecf0f1"
+        <Button
+            android:textSize="17dp"
+            android:id="@+id/btn_datve_chitiet"
+            android:textColor="@color/whiteText"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center_horizontal"
+            android:text="ĐẶT VÉ"
             android:textStyle="bold"
-            android:layout_margin="10px"
-            android:textSize="18dp"
-            android:text="Mô tả chi tiết"
+            android:background="@drawable/button_gradient"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="55dp" />
+    </RelativeLayout>
 
-    </LinearLayout>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <TextView
-            android:id="@+id/textviewmotachitiet"
-            android:layout_margin="20px"
-            android:textColor="#2c3e50"
-            android:text="Tác phẩm live-action chuyển thể: Bác phẩm hành động viễn tưởng đỉnh cao qua bàn tay nhào nặn của những tên tuổi huyền thoại - James Cameron, Jon Landau và đạo diễn Robert Rodriguez. Phim lấy bối cảnh ở thế kỷ 26, xoay quanh nữ cyborg Alita do nữ diễn viên Rosa Salazar thủ vai. Cô bị bỏ rơi ở một bãi rác thải của Iron City và được cứu chữa bởi tiến sĩ Dyson Ido (Christoph Waltz thủ vai). Sau khi tỉnh dậy, cô không còn nhớ mình là ai và thế giới của cô đang sống như thế nào. Trong khi bác sĩ Ido ra sức che giấu quá khứ phức tạp của Alita thì người bạn mới là Hugo tìm cách giúp cô lấy lại ký ức. Alita dần phát hiện ra người cha nuôi của mình là một thợ săn tiền thưởng và sau đó, cô tham gia cùng với ông để tìm hiểu về quá khứ của mình. Cô dần phát hiện khả năng chiến đấu siêu phàm cũng như vai trò của cô giữa thế giới bị bao phủ bởi nhiều thế lực bóng tối."
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </ScrollView>
+
 
 </LinearLayout>
